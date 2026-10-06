@@ -1,5 +1,9 @@
 # 喵喵助手 (MiaoAssistant)
 
+> 本应用住在 [android-apps](../) 仓库里，目录内容与上游 [MiaoAssistant](https://github.com/wyhc7/MiaoAssistant)
+> 一致（提交历史也一并保留）。多应用同仓库，发布 tag 改用 `miao-v*` 以免与其他应用撞名，
+> CI/Release 工作流统一放在仓库根的 `.github/workflows/`。
+
 基于 Android **无障碍服务（Accessibility Service）** 的聊天文本改写工具，支持 **QQ / 抖音 / 抖音极速版**。
 在输入时自动按自定义规则改写文本：替换词语、句末追加语气词、附加随机颜文字，让聊天文案秒变「喵系」风格。
 

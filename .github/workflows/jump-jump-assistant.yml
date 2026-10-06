@@ -27,11 +27,12 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
+      # 不用 android-actions/setup-android: 它的 sdkmanager 会去找已下架的 'tools' 包而失败,
+      # ubuntu runner 自带 SDK(ANDROID_HOME 已设), 直接编即可。
       - name: Build debug APKs
-        run: ./gradlew assembleDebug --no-daemon
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

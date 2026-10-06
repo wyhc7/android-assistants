@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">跳一跳助手</string>
+    <string name="a11y_desc">用于执行跳跃按压手势(仅做按下-抬起, 不读取其它应用内容)</string>
+</resources>

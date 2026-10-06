@@ -1,0 +1,37 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.iml
+*.log
+*.release-notes.md
+
+# 安卓构建产物与本地配置
+build/
+.gradle/
+local.properties
+captures/
+keystore.properties
+*.keystore
+*.jks
+*.apk
+*.aab
+
+# 跳一跳助手：桌面端训练数据、采集帧与中间产物。
+# 体积大（原始采集约 500MB）且都能由脚本重新生成，不随仓库分发。
+jump-jump-assistant/emulator/
+jump-jump-assistant/emulator_skin/
+jump-jump-assistant/dataset/
+jump-jump-assistant/dataset_ft/
+jump-jump-assistant/preview/
+jump-jump-assistant/screenshots/
+jump-jump-assistant/annotations/
+jump-jump-assistant/annotations_emu/
+jump-jump-assistant/annotations_r7/
+jump-jump-assistant/__pycache__/
+jump-jump-assistant/models/
+# 注意：只忽略项目根目录下的预训练权重；runs/*/weights/best.pt 是训练产物，要留
+jump-jump-assistant/*.pt
+jump-jump-assistant/runs/*/weights/last.pt

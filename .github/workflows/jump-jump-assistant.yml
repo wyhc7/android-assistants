@@ -1,0 +1,40 @@
+name: jump-jump-assistant
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'jump-jump-assistant/**'
+      - '.github/workflows/jump-jump-assistant.yml'
+  pull_request:
+    paths:
+      - 'jump-jump-assistant/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: jump-jump-assistant/android
+    steps:
+      - uses: actions/checkout@v4
+
+      # AGP 8.7.3 不接受 JDK 25，必须 17~21
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build debug APKs
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: jump-jump-assistant-debug
+          path: jump-jump-assistant/android/build/outputs/apk/debug/*.apk

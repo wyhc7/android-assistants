@@ -1,6 +1,6 @@
 # 喵喵助手 (MiaoAssistant)
 
-> 本应用住在 [android-apps](../) 仓库里，目录内容与上游 [MiaoAssistant](https://github.com/wyhc7/MiaoAssistant)
+> 本应用住在 [little-toys](../) 仓库里，目录内容与上游 [MiaoAssistant](https://github.com/wyhc7/MiaoAssistant)
 > 一致（提交历史也一并保留）。多应用同仓库，发布 tag 改用 `miao-v*` 以免与其他应用撞名，
 > CI/Release 工作流统一放在仓库根的 `.github/workflows/`。
 

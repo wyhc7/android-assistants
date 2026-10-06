@@ -147,7 +147,7 @@ eval_ensemble.py   集成评估(两个模型每类取高置信)
 
 ## 8. 这个目录在仓库里的位置
 
-本项目是 [android-apps](../) 下的一个子目录，安卓工程在 [`android/`](android/)：
+本项目是 [little-toys](../) 下的一个子目录，安卓工程在 [`android/`](android/)：
 
 ```bash
 cd android && ./gradlew assembleDebug

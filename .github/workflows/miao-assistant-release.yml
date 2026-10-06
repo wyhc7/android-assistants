@@ -1,4 +1,4 @@
-﻿name: miao-assistant release
+name: miao-assistant release
 
 on:
   push:
